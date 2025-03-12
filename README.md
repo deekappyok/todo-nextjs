@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To-Do List App (v2 - Next.js)
 
-## Getting Started
+## WORKING PROGRES....
 
-First, run the development server:
+A simple, fast, and secure to-do list application built with **Next.js**, **Prisma**, and **PostgreSQL**. Create tasks, manage your to-do list, and authenticate users—all while leveraging **Cloudflare** for security and performance.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**LIVE PREVIEW**: [To-Do List App](https://todo-nextjs.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Create Tasks**: Easily add tasks with descriptions and due dates.
+- **Manage Tasks**: Mark tasks as complete, edit, or delete them.
+- **User Authentication**: Secure user accounts with sign-up and login functionality.
+- **Cloudflare Security**: Handles the real IP addresses even when behind Cloudflare.
+- **Prevent Duplicate Tasks**: Users can only create unique tasks.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- **Next.js** (Frontend + API)
+- **Prisma ORM** (Database interaction)
+- **PostgreSQL** (Database)
+- **Cloudflare** (Proxy & security)
 
-To learn more about Next.js, take a look at the following resources:
+## Quick Start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repo**:
+    ```bash
+    git clone https://github.com/yourusername/todo-nextjs.git
+    cd todo-app
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3. **Set up your environment**:
+    - Create a `.env` file with the following:
+    ```env
+    DATABASE_URL="postgresql://username:password@localhost:5432/todo_db"
+    NEXTAUTH_URL="http://localhost:3000"
+    NEXTAUTH_SECRET="your_secret"
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run migrations**:
+    ```bash
+    npx prisma migrate dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Start the app**:
+    ```bash
+    npm run dev
+    ```
+
+Your app will be live at `http://localhost:3000`.
+
+---
+
+## Cloudflare Integration
+
+Cloudflare proxies your requests, and we use the `CF-Connecting-IP` header to capture the real IP address of users, ensuring privacy and security.
+
+---
+
+## Deployment
+
+1. Deploy the app to **Vercel** or any cloud platform that supports Next.js.
+2. Set the `DATABASE_URL`, `NEXTAUTH_URL`, and any other necessary environment variables.
+
+---
+
+## Contributing
+
+Feel free to fork and submit PRs to improve the app! Contributions are welcome.
+
+## License
+
+MIT License.
+
+---
+
+This adaptation maintains the structure of your original polling app while focusing on the features and functionalities of a to-do list application with user authentication. Let me know if you need any further modifications or additional features!
