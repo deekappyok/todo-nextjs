@@ -1,6 +1,6 @@
 // next-auth.d.ts
-// @ts-ignore
-import NextAuth from "next-auth";
+// @typescript-eslint/no-unused-vars
+import NextAuth from "next-auth"; // @typescript-eslint/no-unused-vars
 
 declare module "next-auth" {
   interface Session {
