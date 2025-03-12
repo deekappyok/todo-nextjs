@@ -9,17 +9,6 @@ import { FaUser, FaSignOutAlt, FaEllipsisV } from 'react-icons/fa'; // Importing
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import * as Dialog from '@radix-ui/react-dialog';
 
-// Define types for User and Session
-interface User {
-  name: string;
-  email: string;
-}
-
-interface Session {
-  user: User;
-  expires: string; // or Date, depending on your implementation
-}
-
 interface Todo {
   id: number;
   title: string;
@@ -123,7 +112,7 @@ export default function ProtectedPage() {
       {/* Todo List */}
       <div className="bg-white shadow-md rounded-lg p-4">
         {todos.length === 0 ? (
-          <p className="text-gray-600">No todos available. Add some!</p>
+          <p className="text-gray-600">No todos available. Add some! 😢</p>
         ) : (
           todos.map(todo => (
             <div key={todo.id} className="flex justify-between items-center border-b py-2">
