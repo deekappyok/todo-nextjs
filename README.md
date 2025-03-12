@@ -52,8 +52,6 @@ A simple, fast, and secure to-do list application built with **Next.js**, **Pris
     npm run dev
     ```
 
-Your app will be live at `http://localhost:3000`.
-
 ---
 
 ## Cloudflare Integration
