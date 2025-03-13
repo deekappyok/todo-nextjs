@@ -58,7 +58,7 @@ export default function ProtectedPage() {
 
   const [open, setOpen] = useState(false); // Modal open state
 
-  if (loading) {
+  if (loading || !session) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
